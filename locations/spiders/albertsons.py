@@ -90,10 +90,6 @@ class AlbertsonsSpider(SitemapSpider, StructuredDataSpider):
     drop_attributes = {"facebook", "image", "twitter"}
     search_for_email = False
     search_for_image = False
-    custom_settings = {
-        "CONCURRENT_REQUESTS_PER_DOMAIN": 4,
-        # "DOWNLOAD_DELAY": 0.25,  # This can safely be set to 0.25 for local runs.
-    }
 
     def pre_process_data(self, ld_data, **kwargs):
         ld_data.pop("openingHours", None)
