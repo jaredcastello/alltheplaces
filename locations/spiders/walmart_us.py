@@ -19,10 +19,7 @@ class WalmartUSSpider(Spider):
     allowed_domains = ["www.walmart.com"]
     custom_settings = {
         "USER_AGENT": CHROME_LATEST,
-        "CONCURRENT_REQUESTS": 1,
         "ROBOTSTXT_OBEY": False,
-        "DOWNLOAD_DELAY": 1.0,
-        "RANDOMIZE_DOWNLOAD_DELAY": True,
     }
     base_url = "https://www.walmart.com/orchestra/home/graphql/nearByNodes"
     query_hash = "383d44ac5962240870e513c4f53bb3d05a143fd7b19acb32e8a83e39f1ed266c"
